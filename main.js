@@ -1,17 +1,17 @@
-var bReady;
+var gReady;
 $(document).ready(function(){
     
     // This pauses the re-stacking until the expand animation is finished
-    $(".ps-photoset").hover(function(){
-    bReady = false;
+    $(".gPhotoset").hover(function(){
+    gReady = false;
     setTimeout(function(){
-        bReady = true;
+        gReady = true;
     }, 600);  
     });
 
-    $(".ps-photo").hover(function(){
-    if (bReady == true){
-        $(".ps-photo").css("z-index", "auto");
+    $(".gPhoto").hover(function(){
+    if (gReady == true){
+        $(".gPhoto").css("z-index", "auto");
         $(this).css("z-index", "4");
     } else {
         // condole.log("stacking temporarily disabled")
